@@ -1,0 +1,8 @@
+# 생성물 — build.sh 로 언제든 재생성 가능.
+#
+# 의도적으로 커밋하지 않습니다: 이 저장소는 GitHub Pages로 공개 배포되므로
+# dist/ 를 커밋하면 전화번호가 담긴 PDF가 공개 URL로 노출됩니다.
+# (jungyonge.github.io/resume/dist/... 로 누구나 접근 가능)
+#
+# 특정 버전을 보존하려면 dist/ 밖에 두거나 별도 비공개 저장소를 쓰세요.
+dist/

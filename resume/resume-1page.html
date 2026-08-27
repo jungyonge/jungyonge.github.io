@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>최정용 이력서 (1p)</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --dark: #2A2A2A;
+    --accent: #C8A84B;
+    --text: #1F1F1F;
+    --muted: #5A5A5A;
+    --line: #E2DED8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--text);
+    background: #fff;
+    font-size: 10pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    /* 기본 widow/orphan(2줄)이 페이지 경계의 .stack 같은 블록을 통째로
+       다음 페이지로 밀어내 빈 페이지를 만들기 때문에 1로 완화 */
+    orphans: 1;
+    widows: 1;
+  }
+
+  .page { width: 210mm; padding-bottom: 3mm; }
+
+  /* ─────────── 헤더 ─────────── */
+  header {
+    background: var(--dark);
+    color: #EDEDED;
+    padding: 7mm 14mm 6mm;
+    display: flex;
+    align-items: center;
+    gap: 9mm;
+  }
+  .id-block { flex: 1; }
+  .name-en {
+    font-size: 20pt; font-weight: 700; color: #fff;
+    letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.05;
+  }
+  .name-ko { font-size: 9.5pt; color: #A0A0A0; margin-top: 1.5pt; letter-spacing: 0.05em; }
+  .tagline { margin-top: 5pt; display: flex; align-items: center; gap: 6pt; }
+  .role {
+    background: var(--accent); color: #1A1A1A;
+    font-size: 7pt; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; padding: 2pt 6pt;
+  }
+  .years { font-size: 8pt; color: #A0A0A0; }
+
+  .contact { font-size: 8pt; color: #D5D5D5; text-align: right; line-height: 1.75; flex-shrink: 0; }
+  .contact div span {
+    color: var(--accent); font-weight: 700; margin-right: 4pt;
+    letter-spacing: 0.08em; font-size: 6.5pt;
+  }
+
+  /* ─────────── 본문 ─────────── */
+  .body { padding: 0 14mm; }
+  section { margin-top: 3.5mm; }
+
+  h2 {
+    font-size: 7.5pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: var(--text);
+    padding-left: 6pt; border-left: 2.5pt solid var(--accent);
+    margin-bottom: 2mm;
+  }
+
+  .summary { font-size: 8.8pt; color: var(--muted); line-height: 1.55; text-align: justify; }
+
+  /* 스킬 */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; row-gap: 1.5mm; }
+  .skill-row { display: flex; gap: 4pt; font-size: 8.4pt; }
+  .skill-key {
+    flex: 0 0 24mm; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.11em;
+    text-transform: uppercase; color: var(--accent); padding-top: 1.5pt;
+  }
+  .skill-val { color: var(--muted); line-height: 1.4; }
+
+  /* 경력 */
+  .job + .job { margin-top: 2.5mm; padding-top: 2.5mm; border-top: 0.5pt solid var(--line); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-title { font-size: 10.5pt; font-weight: 700; }
+  .job-title em {
+    font-style: normal; font-weight: 600; font-size: 8.5pt;
+    color: #9C7F2A; margin-left: 5pt;
+  }
+  .job-date { font-size: 8pt; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
+
+  ul { list-style: none; margin-top: 1.2mm; }
+  li {
+    font-size: 8.5pt; color: var(--muted); line-height: 1.4;
+    padding-left: 8pt; position: relative; margin-bottom: 0.2mm;
+  }
+  li::before {
+    content: "·"; position: absolute; left: 0; top: -1.5pt;
+    color: var(--accent); font-weight: 700; font-size: 12pt;
+  }
+  li b { color: var(--text); font-weight: 600; }
+  .stack { font-size: 7pt; color: #8A8A8A; margin-top: 1mm; letter-spacing: 0.02em; }
+
+  /* 하단 2단 */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+  .sub-label {
+    font-size: 6.5pt; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 1.6mm;
+  }
+  .item { font-size: 8.5pt; line-height: 1.4; }
+  .item + .item { margin-top: 1mm; }
+  .item strong { font-weight: 600; }
+  .item span { font-size: 7.5pt; color: var(--muted); }
+
+  footer {
+    margin: 3mm 14mm 0; padding-top: 1.8mm;
+    border-top: 0.5pt solid var(--line);
+    font-size: 7pt; color: #9A9A9A;
+    display: flex; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="id-block">
+      <div class="name-en">Jung-yong Choi</div>
+      <div class="name-ko">최정용</div>
+      <div class="tagline">
+        <span class="role">Java Back-end Developer</span>
+        <span class="years">Since 2018 · 경력 7년 8개월</span>
+      </div>
+    </div>
+    <div class="contact">
+      <div><span>TEL</span>010-4692-6062</div>
+      <div><span>MAIL</span>framework@kakao.com</div>
+      <div><span>GIT</span>github.com/jungyonge</div>
+      <div><span>BLOG</span>blockchain-baam.tistory.com</div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <section>
+      <h2>Profile</h2>
+      <p class="summary">
+        복잡한 비즈니스 로직을 안정적인 코드로 구현하는 백엔드 개발자입니다. 대규모 배치 시스템과 데이터 파이프라인 최적화에 강점을 가지며,
+        일 800만+ 요청 규모 F&amp;B 플랫폼에서 Redis·SSE 기반 대기열 시스템을 신규 설계·구축하고 부하테스트·APM 병목 분석으로 트래픽 대응을 주도하고 있습니다.
+        NFT 발행 플랫폼을 기획부터 운영까지 직접 수행한 경험이 있습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-row">
+          <div class="skill-key">Languages</div>
+          <div class="skill-val">Java 8/11/21 · JavaScript · Solidity · Python</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Backend</div>
+          <div class="skill-val">Spring Boot 3 · Virtual Threads · Spring Batch · Spring Security · JPA · MyBatis</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Data</div>
+          <div class="skill-val">MySQL(Aurora) · MariaDB · MongoDB · Redis Cluster · Redisson</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Infra &amp; MQ</div>
+          <div class="skill-val">AWS ECS Fargate · Docker · Jenkins · Kafka · ActiveMQ · SSE</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Observability</div>
+          <div class="skill-val">Datadog APM · Elasticsearch · k6 · JMeter</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Front &amp; Chain</div>
+          <div class="skill-val">React · JSP · Klaytn · Polygon · Smart Contract</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">주식회사 비버웍스 <em>Back-end Developer</em></div>
+          <div class="job-date">2023.03 – Present</div>
+        </div>
+        <ul>
+          <li><b>대기열(Queue Gate) 시스템 신규 설계·구축(단독)</b> — Java 21 Virtual Threads · Redis Cluster · SSE 기반 실시간 대기열. Lua 원자적 큐 연산, Pub/Sub 이벤트 전파, HMAC 인증·Rate Limit 적용</li>
+          <li>승격 로직 N+1 Redis 왕복 제거 및 SSE 브로드캐스트 락 직렬화 해소로 처리시간 대폭 단축, k6 부하테스트 체계(7 Phase) 구축 — <b>33분 soak 16만 iteration 무오류(p95 11ms)</b></li>
+          <li><b>일 800만+ 요청 브랜드 포인트 API 운영 안정화</b> — 오픈 러시 시간당 300만 요청 피크 대응, Datadog APM·ES 로그 기반 인시던트 분석, 캐시 Stampede 단일 플라이트·기동 워밍업 도입</li>
+          <li><b>CRM 캠페인 API 구축</b> — 5개 채널(Push/SMS/LMS/MMS/알림톡) 발송 시스템, 회원 추출 엔진 및 쿠폰 자동 발급 파이프라인 End-to-End 설계</li>
+          <li><b>매장·운영관리 백오피스 및 정산 배치</b> — 쿼리 527건 튜닝으로 매출 통계 배치 개선, 엑셀 10종 대용량 다운로드 청크 분할로 OOM 해소, 계약·청구·수납 파이프라인 구축</li>
+        </ul>
+        <div class="stack">Java 8/21 · Spring Boot 2.7/3.4 · MySQL Aurora · Redis Cluster · ActiveMQ · Spring Batch · AWS ECS Fargate · k6 · Datadog</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">프리랜서 <em>Blockchain &amp; Back-end Developer</em></div>
+          <div class="job-date">2021.10 – 2023.03</div>
+        </div>
+        <ul>
+          <li><b>크래프트맨쉽 — NFT 발행 플랫폼</b>(craftsmanship.pro) 기획·개발·운영 전 과정 수행. 개발 지식 없이는 컨트랙트를 배포할 수 없던 작가들을 위해 GUI 기반 멀티체인(Klaytn, Polygon) 배포·민팅 시스템 구축</li>
+          <li>민팅 백엔드 로직·스마트 컨트랙트 전담. 커뮤니티를 운영해 요구사항을 수집하고 개발자 고용이 필요했던 런치패드(드랍스)·토큰 배포를 UI화 — <b>컨트랙트 1,000개 이상 배포 / NFT 약 35,000개 발행</b></li>
+          <li>NFT 대량 민팅 외주 4개 프로젝트 — 리빌(Reveal)·랜덤 민팅 구현 및 컨트랙트 연동</li>
+        </ul>
+        <div class="stack">Spring Boot 3 · Java 11/17 · Gradle · Solidity · React · Klaytn · Polygon · MySQL · JPA · AWS</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">옐로커머스 (쿠차) <em>Back-end Developer</em></div>
+          <div class="job-date">2019.06 – 2021.04</div>
+        </div>
+        <ul>
+          <li>지속 실패하던 Spark 기반 수집 배치를 <b>Kafka 기반 빅데이터 수집 엔진으로 재구축</b> — 메시지 보장이 불필요한 요건이라 속도 우위의 Kafka를 채택, Producer/Consumer 개발 담당</li>
+          <li>XML·EP·API·HTML 크롤링 등 다양한 경로의 상품 수집 배치 <b>100여 개</b>를 약 2년간 모니터링·개발, 백오피스 신규 5건·유지보수 25건</li>
+          <li>포춘쿠키 포인트 소진 이벤트 — 일별 소진·잔여 포인트 및 이벤트 비용 Summary 배치와 통계·등록 백오피스 담당</li>
+        </ul>
+        <div class="stack">Java 8 · Spring · Spring Batch · MyBatis · MariaDB · JSP · Kafka · Flask/Python</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">케이스타페이 <em>Back-end Developer</em></div>
+          <div class="job-date">2018.09 – 2019.05</div>
+        </div>
+        <ul>
+          <li><b>거래소 전용 API 서버 분리·고도화(단독)</b> — 거래소 추가 시 전체 재배포, 매수 연동 로그 부재 등 4개 문제 해결. 텔레그램 모니터링 봇을 직접 제안·개발</li>
+          <li><b>블록체인 익스플로러 신규 구축</b> — Block 누락·Rich List 부재를 해소하기 위해 전체 Block/Transaction DB화. RPC(getblock·getrawtransaction) 파싱 및 데이터 Summary 담당</li>
+        </ul>
+        <div class="stack">Java 8/11 · Spring Boot 2 · Gradle · MyBatis · JPA · MySQL · AWS</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education &amp; Others</h2>
+      <div class="two-col">
+        <div>
+          <div class="sub-label">학력 · 자격</div>
+          <div class="item"><strong>학점은행제 — 컴퓨터공학 (학사)</strong> <span>2017.03 – 2017.09</span></div>
+          <div class="item"><strong>명지전문대학 — 컴퓨터전자과 (전문학사)</strong> <span>2010.03 – 2017.02</span></div>
+          <div class="item"><strong>정보처리산업기사</strong> <span>2017.05.26 취득</span></div>
+        </div>
+        <div>
+          <div class="sub-label">Honors &amp; Patent</div>
+          <div class="item"><strong>휴대용 카드의 교통카드 온/오프 스위치 장치</strong> <span>특허 등록 · 2004714790000</span></div>
+          <div class="item"><strong>창업경진대회 3위 (24팀 중)</strong> <span>상단 특허 기반 아이템</span></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div>최정용 · Java Back-end Developer</div>
+    <div>framework@kakao.com</div>
+  </footer>
+
+</div>
+</body>
+</html>
